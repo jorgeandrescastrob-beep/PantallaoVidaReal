@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pantalla o vida real</title>
+<style>
+:root{
+  --navy:#20384b; --cream:#f7f4ec; --ink:#253746;
+  --green:#dce8df; --coral:#e8a18a; --line:#d8ddd9; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+nav{position:sticky;top:0;z-index:10;background:rgba(247,244,236,.96);border-bottom:1px solid var(--line);padding:16px 5%;display:flex;gap:28px;justify-content:center}
+nav a{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px}
+.hero{background:var(--navy);color:white;padding:80px 8% 90px}
+.hero .eyebrow{letter-spacing:3px;font-weight:700;font-size:15px}
+.hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;max-width:900px;margin:25px 0}
+.hero p{font-size:24px;max-width:780px;color:#eef3f2}
+.container{width:min(1180px,88%);margin:auto}
+section{padding:78px 0}
+h2{font-size:42px;line-height:1.08;margin:0 0 22px;color:var(--navy)}
+h3{font-size:23px;line-height:1.2;color:var(--navy);margin:0 0 10px}
+.lead{font-size:21px;max-width:900px}
+.video{background:#172d3e;padding:55px 0}
+.video h2{color:white}
+video{width:100%;display:block;border-radius:14px;background:#000;max-height:680px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:32px}
+.card{background:white;border:1px solid var(--line);border-radius:16px;padding:30px}
+.card.green{background:var(--green)}
+.card.coral{border-top:5px solid var(--coral)}
+.number{font-size:14px;font-weight:800;letter-spacing:2px;color:#71807b;margin-bottom:10px}
+.big{font-size:25px;font-weight:700;color:var(--navy)}
+.note{border-left:5px solid var(--coral);padding:22px 25px;background:white;margin:30px 0;font-size:19px}
+.columns{columns:2;column-gap:55px}
+.columns p,.columns li{break-inside:avoid}
+table{width:100%;border-collapse:collapse;background:white;margin-top:30px;font-size:17px}
+th,td{text-align:left;padding:18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--navy);color:white}
+.signs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.sign{background:white;padding:24px;border-radius:14px;border:1px solid var(--line)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan .card{min-height:230px}
+.timerbox{background:var(--navy);color:white;border-radius:20px;padding:40px;text-align:center;margin-top:30px}
+#timer{font-size:72px;font-weight:800;letter-spacing:2px;margin:15px}
+button{border:0;border-radius:10px;padding:13px 22px;font-weight:800;font-size:16px;cursor:pointer;margin:5px}
+button.start{background:white;color:var(--navy)}
+button.reset{background:#dce8df;color:var(--navy)}
+footer{background:var(--navy);color:white;padding:55px 8%;text-align:center}
+footer p{max-width:800px;margin:10px auto;color:#e8eeee}
+@media(max-width:800px){
+ nav{overflow:auto;justify-content:flex-start}
+ .grid,.signs,.plan{grid-template-columns:1fr}
+ .columns{columns:1}
+ section{padding:55px 0}
+ h2{font-size:34px}
+ .hero p{font-size:20px}
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="#video">VIDEO</a><a href="#tecnologia">TECNOLOGÍA</a><a href="#atractiva">¿POR QUÉ ATRAE?</a>
+<a href="#efectos">EFECTOS</a><a href="#senales">SEÑALES</a><a href="#equilibrio">EQUILIBRIO</a><a href="#reto">RETO</a>
+</nav>
+
+<header class="hero">
+<div class="eyebrow">PROYECTO · PANTALLA O VIDA REAL</div>
+<h1>¿Pantalla o vida real?</h1>
+<p>La tecnología forma parte de nuestra vida. El reto no es eliminarla, sino entender cómo funciona, qué lugar ocupa y por qué necesitamos encontrar un equilibrio.</p>
+</header>
+
+<section id="video" class="video">
+<div class="container">
+<h2>Una situación que nos resulta familiar</h2>
+<p style="color:#e8eeee;font-size:18px">Mira el video y observa cómo cambia el tiempo de los cuatro amigos cuando dejan las pantallas y vuelven a compartir actividades.</p>
+<video controls src="video.mp4"></video>
+</div>
+</section>
+
+<section id="tecnologia">
+<div class="container">
+<h2>La tecnología está en casi todo</h2>
+<p class="lead">Un celular, una computadora, una tablet, una consola o una televisión son herramientas. Las usamos para estudiar, investigar, comunicarnos, crear, jugar, escuchar música y resolver tareas.</p>
+<div class="grid">
+<div class="card green"><h3>Para aprender</h3><p>Podemos buscar información, ver explicaciones, practicar idiomas, investigar temas y acceder a recursos educativos.</p></div>
+<div class="card"><h3>Para comunicarnos</h3><p>Permite conversar con familiares y amigos que están lejos, compartir información y trabajar en equipo.</p></div>
+<div class="card"><h3>Para crear</h3><p>Podemos editar videos, dibujar, escribir, hacer presentaciones, programar, grabar música y desarrollar ideas.</p></div>
+<div class="card"><h3>Para entretenernos</h3><p>También ofrece videojuegos, películas, series, música y muchas otras formas de diversión.</p></div>
+</div>
+<div class="note"><strong>Entonces, ¿la tecnología es mala?</strong> No. La tecnología puede ser una herramienta muy útil. Lo importante es observar qué lugar ocupa y qué otras actividades quedan desplazadas cuando pasamos demasiado tiempo frente a una pantalla.</div>
+</div>
+</section>
+
+<section id="atractiva" style="background:#eef1ed">
+<div class="container">
+<h2>¿Por qué las pantallas pueden ser tan atractivas?</h2>
+<p class="lead">Muchas experiencias digitales están construidas para mantener nuestra atención. No significa que cada vez que usamos una pantalla exista un problema, pero ayuda entender por qué puede resultar difícil dejarla.</p>
+<div class="grid">
+<div class="card"><h3>🔔 Notificaciones</h3><p>Un sonido, una vibración o un aviso pueden hacernos mirar el dispositivo aunque no tuviéramos pensado hacerlo.</p></div>
+<div class="card"><h3>▶️ Contenido continuo</h3><p>Cuando termina un video, juego o publicación, inmediatamente puede aparecer otra. Esto facilita seguir consumiendo contenido sin una pausa natural.</p></div>
+<div class="card"><h3>🏆 Recompensas</h3><p>Los puntos, niveles, comentarios, “me gusta” y nuevos contenidos pueden generar interés y hacer que queramos continuar.</p></div>
+<div class="card"><h3>😶 Aburrimiento</h3><p>Cuando no sabemos qué hacer, mirar una pantalla es una respuesta rápida. Con el tiempo puede convertirse en un hábito automático.</p></div>
+</div>
+<div class="note"><strong>Una idea importante:</strong> que algo sea atractivo no significa que sea malo. Significa que debemos ser conscientes de cómo influye en nuestra atención y en nuestras decisiones.</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>¿Qué significa usar demasiado la tecnología?</h2>
+<p class="lead">No existe una única cantidad de horas que permita decir que todas las personas están usando demasiado una pantalla. También importa <strong>qué hacemos con ella, cuándo la usamos y qué estamos dejando de hacer por seguir conectados.</strong></p>
+<table>
+<tr><th>Uso equilibrado</th><th>Uso que puede convertirse en un problema</th></tr>
+<tr><td>La tecnología tiene un propósito concreto.</td><td>Se usa automáticamente aunque no haya un objetivo claro.</td></tr>
+<tr><td>Podemos dejar el dispositivo cuando corresponde.</td><td>Cuesta detenerse incluso cuando sabemos que debemos hacerlo.</td></tr>
+<tr><td>No interfiere con sueño, estudio, movimiento o relaciones.</td><td>Empieza a desplazar sueño, tareas, actividad física o tiempo con otras personas.</td></tr>
+<tr><td>También disfrutamos actividades sin pantallas.</td><td>Nos cuesta encontrar algo entretenido sin un dispositivo.</td></tr>
+</table>
+<div class="note">Además, <strong>usar mucho una pantalla no significa automáticamente tener una adicción.</strong> La adicción es un concepto más complejo. Por eso no debemos diagnosticarnos a nosotros mismos por pasar bastante tiempo conectados.</div>
+</div>
+</section>
+
+<section id="efectos" style="background:#fff">
+<div class="container">
+<h2>¿Qué puede cambiar cuando pasamos demasiado tiempo frente a una pantalla?</h2>
+<p class="lead">El efecto no es igual para todas las personas. Una misma pantalla puede servir para estudiar, crear o comunicarse, pero también puede quitar tiempo a otras necesidades importantes.</p>
+<div class="grid">
+<div class="card coral"><h3>😴 Sueño</h3><p>Cuando las pantallas ocupan parte del horario de descanso, puede ser más difícil mantener una rutina de sueño adecuada. Además, quedarse conectado hasta muy tarde reduce directamente el tiempo disponible para dormir.</p></div>
+<div class="card"><h3>🎯 Atención</h3><p>Las interrupciones constantes —mensajes, avisos o cambios rápidos de contenido— pueden dificultar mantener la atención en una actividad que necesita concentración.</p></div>
+<div class="card green"><h3>🏃 Movimiento</h3><p>El tiempo sentado frente a una pantalla puede sustituir parte del tiempo destinado a caminar, correr, practicar deportes o jugar físicamente.</p></div>
+<div class="card"><h3>👨‍👩‍👧‍👦 Relaciones</h3><p>Cuando cada persona está concentrada en su dispositivo, disminuyen las oportunidades de conversar, jugar y compartir experiencias cara a cara.</p></div>
+<div class="card"><h3>📚 Responsabilidades</h3><p>Una pantalla puede hacer que una tarea parezca menos urgente. Si se posterga constantemente, después se acumulan deberes y aumenta la sensación de tener demasiadas cosas pendientes.</p></div>
+<div class="card"><h3>🧠 Hábitos</h3><p>Repetir una conducta en el mismo contexto puede convertirla en una costumbre. Por eso podemos terminar revisando el celular por hábito, incluso sin recibir una notificación.</p></div>
+</div>
+</div>
+</section>
+
+<section id="senales">
+<div class="container">
+<h2>Señales que vale la pena observar</h2>
+<p class="lead">Una señal aislada no significa que exista una adicción. Son situaciones que pueden servir para preguntarnos si estamos perdiendo el equilibrio.</p>
+<div class="signs">
+<div class="sign">Te cuesta dejar la pantalla cuando ya decidiste parar.</div>
+<div class="sign">Miras el dispositivo repetidamente sin tener un motivo.</div>
+<div class="sign">Te quedas despierto más tarde por seguir conectado.</div>
+<div class="sign">Dejas tareas o responsabilidades para continuar mirando.</div>
+<div class="sign">Te cuesta disfrutar actividades que no utilizan pantallas.</div>
+<div class="sign">Usas el dispositivo durante comidas o momentos destinados a conversar.</div>
+<div class="sign">Te molesta mucho tener que desconectarte.</div>
+<div class="sign">La pantalla ocupa tiempo que antes dedicabas a jugar, moverte o compartir.</div>
+<div class="sign">Sientes que “solo serán unos minutos” y terminas quedándote mucho más tiempo.</div>
+</div>
+</div>
+</section>
+
+<section style="background:#eef1ed">
+<div class="container">
+<h2>La diferencia está en el equilibrio</h2>
+<p class="lead">No se trata de elegir entre “tecnología” y “vida real”. Ambas pueden convivir. El equilibrio aparece cuando la tecnología ocupa un lugar útil sin convertirse en el centro de todas nuestras actividades.</p>
+<table>
+<tr><th>Cuando usamos tecnología</th><th>También necesitamos tiempo para...</th></tr>
+<tr><td>Investigar y aprender</td><td>Leer, conversar y experimentar por nosotros mismos.</td></tr>
+<tr><td>Jugar videojuegos</td><td>Jugar físicamente, practicar deportes o juegos de mesa.</td></tr>
+<tr><td>Ver videos o series</td><td>Descansar, imaginar, crear y salir al aire libre.</td></tr>
+<tr><td>Hablar por mensajes</td><td>Conversar cara a cara y compartir momentos.</td></tr>
+<tr><td>Hacer tareas digitales</td><td>Movernos, hacer pausas y dormir lo suficiente.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="equilibrio">
+<div class="container">
+<h2>¿Cómo se construye un uso más equilibrado?</h2>
+<p class="lead">Aquí sí entran las decisiones prácticas. No todas las familias funcionan igual, pero existen estrategias sencillas que ayudan a organizar el tiempo.</p>
+<div class="plan">
+<div class="card"><h3>1. Tener momentos sin pantallas</h3><p>Por ejemplo, durante las comidas, cuando conversamos o cuando realizamos una actividad familiar.</p></div>
+<div class="card"><h3>2. Proteger el horario de sueño</h3><p>El descanso necesita un espacio propio y no debería competir constantemente con el entretenimiento digital.</p></div>
+<div class="card"><h3>3. Hacer pausas</h3><p>Levantarse, caminar, cambiar de actividad y descansar la atención también forman parte de un uso saludable.</p></div>
+<div class="card"><h3>4. Silenciar lo innecesario</h3><p>No todas las aplicaciones necesitan enviarnos avisos. Reducir interrupciones puede facilitar la concentración.</p></div>
+<div class="card"><h3>5. Tener alternativas</h3><p>Cuando existen juegos, libros, deportes, manualidades o actividades familiares disponibles, no dependemos de una sola forma de entretenimiento.</p></div>
+<div class="card"><h3>6. Terminar primero lo importante</h3><p>Estudio, responsabilidades y descanso pueden tener su propio horario antes de dedicar tiempo al entretenimiento digital.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>La vida fuera de la pantalla también tiene mucho que ofrecer</h2>
+<p class="lead">Cuando dejamos un dispositivo, no significa que nos quedamos sin nada que hacer. Hay actividades que utilizan otras habilidades: movimiento, imaginación, conversación, creatividad y cooperación.</p>
+<div class="columns">
+<ul>
+<li>Juegos de mesa</li><li>Deportes y actividad física</li><li>Salir a caminar</li><li>Montar bicicleta</li><li>Dibujar o pintar</li><li>Leer</li><li>Armar rompecabezas</li><li>Cocinar en familia</li><li>Hacer manualidades</li><li>Escuchar música</li><li>Jugar con amigos</li><li>Conversar</li><li>Inventar historias</li><li>Construir con bloques</li><li>Pasar tiempo al aire libre</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="reto" style="background:#eef1ed">
+<div class="container">
+<h2>Reto: 60 minutos fuera de la pantalla</h2>
+<p class="lead">Durante una hora, deja el dispositivo y elige una actividad que puedas hacer solo o acompañado. La idea no es competir: es comprobar qué ocurre cuando cambiamos de actividad.</p>
+<div class="timerbox">
+<div>TIEMPO RESTANTE</div>
+<div id="timer">60:00</div>
+<button class="start" onclick="startTimer()">EMPEZAR</button>
+<button class="reset" onclick="resetTimer()">REINICIAR</button>
+</div>
+<div class="grid">
+<div class="card"><h3>Antes</h3><p>¿Qué pensabas hacer con la pantalla? ¿Por qué la ibas a usar?</p></div>
+<div class="card"><h3>Durante</h3><p>¿Qué actividad elegiste? ¿Te costó dejar el dispositivo al principio?</p></div>
+<div class="card"><h3>Después</h3><p>¿Cómo fue la experiencia? ¿Encontraste algo que te gustaría volver a hacer sin pantalla?</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Una última idea</h2>
+<div class="note" style="font-size:25px">
+La tecnología puede ayudarnos a aprender, crear, comunicarnos y divertirnos. Pero nuestra vida también está hecha de conversaciones, movimiento, descanso, imaginación, amistad y experiencias que ocurren lejos de una pantalla.
+<br><br>
+<strong>La tecnología puede ser parte de nuestra vida, pero no tiene que ser toda nuestra vida.</strong>
+</div>
+</div>
+</section>
+
+<footer>
+<h2 style="color:white">APAGA LA PANTALLA. ENCIENDE EL JUEGO.</h2>
+<p>Encontrar el equilibrio también es parte del juego.</p>
+</footer>
+
+<script>
+let seconds=3600, interval=null;
+function render(){
+  const m=Math.floor(seconds/60).toString().padStart(2,'0');
+  const s=(seconds%60).toString().padStart(2,'0');
+  document.getElementById('timer').textContent=m+':'+s;
+}
+function startTimer(){
+  if(interval) return;
+  interval=setInterval(()=>{
+    if(seconds<=0){clearInterval(interval);interval=null;return;}
+    seconds--; render();
+  },1000);
+}
+function resetTimer(){
+  clearInterval(interval); interval=null; seconds=3600; render();
+}
+render();
+</script>
+</body>
+</html>
